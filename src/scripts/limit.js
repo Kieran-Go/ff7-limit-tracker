@@ -1,9 +1,8 @@
 export default class Limit{
-    constructor(name, maxUses){
+    constructor(name, maxUses = 0){
         this._name = name,
         this._uses = 0,
-        this._maxUses = maxUses,
-        this._unlocked = false;
+        this._maxUses = maxUses;
     }
 
     // getters
@@ -16,9 +15,6 @@ export default class Limit{
     getMaxUses(){
         return this._maxUses;
     }
-    getUnlocked(){
-        return this._unlocked;
-    }
 
     // setters
     setName(name){
@@ -29,9 +25,6 @@ export default class Limit{
     }
     setMaxUses(maxUses){
         this._maxUses = maxUses;
-    }
-    setUnlocked(unlocked){
-        this._unlocked = unlocked;
     }
 
     // Methods
@@ -44,13 +37,4 @@ export default class Limit{
         if(this._uses === 0) return;
         this._uses--;
     }
-
-    unlock(){
-        this._unlocked = true;
-    }
-
-    lock(){
-        this._unlocked = false;
-    }
-
 }

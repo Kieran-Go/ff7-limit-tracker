@@ -1,8 +1,8 @@
 export default class Character{
-    constructor(name, limitLVs){
+    constructor(name, limitLVs, kills = 0){
         this._name = name,
         this._limitLVs = limitLVs,
-        this._kills = 0;
+        this._kills = kills;
     }
 
     // Getters
@@ -35,6 +35,14 @@ export default class Character{
     removeKill(){
         if(this._kills === 0) return;
         this._kills--;
+    }
+
+    changeSelectedLV(lv){
+        for(let i = 0; i < this._limitLVs.length; i++){
+            const limitLV = this._limitLVs[i];
+            if(lv === i) limitLV.selected = true;
+            else limitLV.selected = false;
+        }
     }
 
     logCharacter(){
