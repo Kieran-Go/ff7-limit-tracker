@@ -1,7 +1,7 @@
 export default class Character{
-    constructor(name, limits){
+    constructor(name, limitLVs){
         this._name = name,
-        this._limits = limits,
+        this._limitLVs = limitLVs,
         this._kills = 0;
     }
 
@@ -12,8 +12,8 @@ export default class Character{
     get kills(){
         return this._kills;
     }
-    get limits(){
-        return this._limits;
+    get limitLVs(){
+        return this._limitLVs;
     }
 
     // Setters
@@ -23,8 +23,8 @@ export default class Character{
     set kills(kills){
         this._kills = kills;
     }
-    set limits(limits){
-        this._limits = limits;
+    set limitLVs(limitLVs){
+        this._limitLVs = limitLVs;
     }
 
     // Methods
@@ -38,6 +38,6 @@ export default class Character{
     }
 
     logCharacter(){
-        console.log({name: this._name, kills: this._kills, limits: this._limits});
+        console.log({name: this._name, kills: this._kills, limitLVs: this._limitLVs});
     }
 }

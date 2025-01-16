@@ -5,5 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FF7 Limit Tracker</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Final Fantasy VII<br>Limit Tracker</h1>
+    <div class="container">
+      <div class="character">
+        <div class="character-head">
+          <img src="media/images/Cloud.png" class="portrait">
+          <p>Cloud</p>
+        </div>
+
+        <div class="stats">
+          <fieldset class="lv-radios">
+            <legend>Limit LV</legend>
+            <label for="lv1">
+              <input type="radio" name="level" value="LV1"> LV1
+            </label>
+            <label for="lv2" class="disabled">
+                <input type="radio" name="level" value="LV2" disabled> LV2
+            </label>
+            <label for="lv3" class="disabled">
+                <input type="radio" name="level" value="LV3" disabled> LV3
+            </label>
+          </fieldset>
+
+          <fieldset class="limit">
+            <legend class="limit-name">Braver</legend>
+            <p class="used">Used: 0 / 8</p>
+            <div class="button-container">
+              <button class="add-use">+</button>
+              <button class="remove-use">-</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <fieldset class="kills-container">
+          <legend>Kills</legend>
+          <div class="kill-info">
+            <p class="kill-count">Count: 0</p>
+            <p class="to-next">To next LV: 120</p>
+          </div>
+          <div class="button-container">
+            <button class="add-kill">+</button>
+            <button class="remove-kill">-</button>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+
+  </body>
 </html>
